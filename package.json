@@ -1,0 +1,17 @@
+{
+  "name": "protoc-gen-purescript",
+  "version": "4.4.0",
+  "bin": "./npm-package/plugin.js",
+  "files": [
+    "npm-package"
+  ],
+  "scripts": {
+    "build-purs": "spago build --config spago-plugin.dhall",
+    "build-js": "esbuild output/ProtocPlugin.Main/index.js --bundle --platform=node --outfile=npm-package/plugin.js --banner:js=\"#!/usr/bin/env node\" --footer:js=\"main();\"",
+    "build": "npm run build-purs && npm run build-js"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  },
+  "license": "MIT"
+}
