@@ -1,5 +1,8 @@
 # Unreleased
 
+
+# v4.4.0 2024-10-15
+
 - Bugfix #38 Add `MonadRec` constraint to `put` functions.
 
 # v4.3.0 2023-01-30
